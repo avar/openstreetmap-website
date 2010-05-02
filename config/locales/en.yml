@@ -1487,7 +1487,7 @@ en:
       password: "Password:"
       openid: "OpenID:"
       openid description: "Use your OpenID to login"
-      username_heading: "Login with username and password:"
+      username_heading: "Login with an OpenStreetMap account:"
       openid_heading: "Login with an OpenID:"
       remember: "Remember me:"
       lost password link: "Lost your password?"
