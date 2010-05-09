@@ -1,24 +1,16 @@
-# Description
-
 This is the Rails port. The Ruby on Rails application that powers
-http://www.openstreetmap.org.
-
-# Running it
+[openstreetmap.org][1].
 
 You can find documentation on how to setup and run the software on the
-OpenStreetMap wiki:
-
-* http://wiki.openstreetmap.org/wiki/The_Rails_Port
-    
-# Hacking it
+[OpenStreetMap wiki][2]:
 
 The canonnical Git repository for this software is hosted at
-git.openstreetmap.org:
+[git.openstreetmap.org][3]:
 
-* http://git.openstreetmap.org/?p=rails.git
-    
-See commiting to the rails port on the wiki for getting your patches
-integrated:
+See [commiting to the rails][4] port on the wiki for getting your
+patches integrated:
 
-* http://wiki.openstreetmap.org/wiki/Committing_to_the_rails_port
-
+[1]: http://www.openstreetmap.org "OpenStreetMap website"
+[2]: http://wiki.openstreetmap.org/wiki/The_Rails_Port "The Rails Port"
+[3]: http://git.openstreetmap.org/?p=rails.git "The rails.git Git repository"
+[4]: http://wiki.openstreetmap.org/wiki/Committing_to_the_rails_port "Commiting to the rails port"
