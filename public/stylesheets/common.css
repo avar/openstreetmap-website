@@ -585,12 +585,16 @@ hr {
 
 /* Rules for the account confirmation page */
 
+div#contributorTermsSummary {
+  width: 80%;
+}
+
 div#contributorTerms {
   border: 1px solid black;
   padding: 4px;
   overflow: auto;
   width: 80%;
-  height: 60%;
+  height: 40%;
 }
 
 div#contributorTerms p#first {

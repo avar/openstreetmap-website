@@ -1,0 +1,21 @@
+<%
+links = {}
+
+%w{ cc_by_sa odbl dbcl contributors }.each do |label|
+    links[label] = link_to(
+        t("user.terms.summary.link.#{label}.text"),
+        t("user.terms.summary.link.#{label}.url"),
+        {
+            :title => t("user.terms.summary.link.#{label}.title"),
+            :target => :new
+        }
+    )
+end
+
+%>
+<%= t('user.terms.summary.text',
+        :cc_by_sa     => links['cc_by_sa'],
+        :odbl         => links['odbl'],
+        :dbcl         => links['dbcl'],
+        :contributors => links['contributors'])
+%>

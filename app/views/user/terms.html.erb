@@ -1,6 +1,8 @@
 <h1><%= t 'user.terms.heading' %></h1>
 
-<p><%= t 'user.terms.read and accept' %></p>
+<div id="contributorTermsSummary">
+  <%= render :partial => "terms_summary" %>
+</div>
 
 <!-- legale is <%= @legale %> -->
 <% form_tag :action => 'terms' do %>
