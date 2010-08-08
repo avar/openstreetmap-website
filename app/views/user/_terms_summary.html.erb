@@ -1,7 +1,15 @@
 <%
 links = {}
 
-%w{ cc_by_sa odbl dbcl contributors }.each do |label|
+links['the_full_text'] = link_to(
+    t("user.terms.summary.link.the_full_text.text"),
+    '#contributorTerms',
+    {
+        :title => t("user.terms.summary.link.the_full_text.title")
+    }
+)
+
+%w{ cc_by_sa odbl contributors }.each do |label|
     links[label] = link_to(
         t("user.terms.summary.link.#{label}.text"),
         t("user.terms.summary.link.#{label}.url"),
@@ -13,9 +21,29 @@ links = {}
 end
 
 %>
-<%= t('user.terms.summary.text',
-        :cc_by_sa     => links['cc_by_sa'],
-        :odbl         => links['odbl'],
-        :dbcl         => links['dbcl'],
-        :contributors => links['contributors'])
-%>
+<p>
+  <%= t('user.terms.summary.items.00 not legally binding',
+        :the_full_text => links['the_full_text']
+       )
+  %>
+</p>
+<ul>
+  <li><%= t('user.terms.summary.items.01 do not put in data') %></li>
+  <li><%= t('user.terms.summary.items.02 you still own the bits') %></li>
+  <li><%= t('user.terms.summary.items.03 you allow the foundation') %></li>
+  <li>
+    <%= t('user.terms.summary.items.04 the osmf can only publish',
+          :cc_by_sa => links['cc_by_sa'],
+          :odbl     => links['odbl']
+        )
+    %>
+  </li>
+  <li><%= t('user.terms.summary.items.05 the osmf can only pick') %></li>
+  <li>
+    <%= t('user.terms.summary.items.06 if you want attribution',
+          :contributors => links['contributors']
+        )
+    %>
+  </li>
+  <li><%= t('user.terms.summary.items.07 you and the osmf disclaim') %></li>
+</ul>

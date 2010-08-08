@@ -1,8 +1,10 @@
-<h1><%= t 'user.terms.heading' %></h1>
+<h1><%= t 'user.terms.heading.summary' %></h1>
 
 <div id="contributorTermsSummary">
   <%= render :partial => "terms_summary" %>
 </div>
+
+<h1><%= t 'user.terms.heading.detailed' %></h1>
 
 <!-- legale is <%= @legale %> -->
 <% form_tag :action => 'terms' do %>

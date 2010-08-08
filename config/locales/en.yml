@@ -1538,7 +1538,71 @@ en:
       terms accepted: "Thanks for accepting the new contributor terms!"
     terms:
       title: "Contributor terms"
-      heading: "Contributor terms"
+      heading:
+        summary: "Summary of OpenStreetMap Contributor Terms"
+        detailed: "Contributor terms"
+      summary:
+        link:
+          cc_by_sa:
+            url: http://creativecommons.org/licenses/by-sa/2.0/
+            title: Creative Commons Attribution-ShareAlike 2.0 license
+            text: CC-BY-SA 2.0
+          odbl:
+            url: http://www.opendatacommons.org/licenses/odbl/summary/ 
+            title: Open Database License (ODbL) v1.0
+            text: Open Database License 1.0
+          contributors:
+            url: http://wiki.openstreetmap.org/wiki/Contributors
+            title: OpenStreetMap Contributors
+            text: the Contributors page
+          the_full_text:
+            title: The Contributor Terms Legalese
+            text: the full text
+        items:
+          00 not legally binding: |
+            This is only a summary and is not legally binding! {{the_full_text}}
+            can be found below.
+
+          01 do not put in data: |
+            Do not put in data you don't have permission to submit. It
+            should either be your own work or something that there is
+            clear permission to use.
+
+          02 you still own the bits: |
+            You still own the bits of data you put in, i.e. you can
+            still use them in other places.
+
+          03 you allow the foundation: |
+            You allow the OpenStreetMap Foundation to publish your bits
+            of data as part of the OpenStreetMap geodata set for others
+            to use.
+
+          04 the osmf can only publish: |
+            The OpenStreetMap Foundation can only publish the data
+            under a free and open license. If it fails in that, it has
+            broken a contract with you.  Until the proposed
+            change-over, that license is the {{cc_by_sa}}. When enough
+            existing contributors agree to re-license their data, that
+            license will change to {{odbl}}.
+
+          05 the osmf can only pick: |
+            The OpenStreetMap Foundation can only pick a new free
+            license if it's approved by the OSMF membership (a
+            foundation of paid-up members) and a 2/3 majority vote of
+            active contributors. You'll be considered an active
+            contributor if you've edited in at least 3 out of the last
+            12 months and don't take longer than 3 weeks to reply to
+            E-Mail.
+
+          06 if you want attribution: |
+            If you want attribution you should add your name to
+            {{contributors}}.
+
+          07 you and the osmf disclaim: |
+            Both you and the OpenStreetMap Foundation disclaim
+            responsibility for anything that might happen to folks using
+            your data.
+
       consider_pd: "In addition to the above agreement, I consider my contributions to be in the Public Domain"
       consider_pd_why: "what's this?"
       consider_pd_why_url: http://www.osmfoundation.org/wiki/License/Why_would_I_want_my_contributions_to_be_public_domain
