@@ -17,8 +17,8 @@ class TraceController < ApplicationController
 
   caches_action :list, :view, :layout => false
   caches_action :georss, :layout => true
-  cache_sweeper :trace_sweeper, :only => [:create, :edit, :delete, :api_create], :unless => OSM_STATUS == :database_offline
-  cache_sweeper :tracetag_sweeper, :only => [:create, :edit, :delete, :api_create], :unless => OSM_STATUS == :database_offline
+  cache_sweeper :trace_sweeper, :only => [:create, :edit, :delete, :api_create], :unless => STATUS == :database_offline
+  cache_sweeper :tracetag_sweeper, :only => [:create, :edit, :delete, :api_create], :unless => STATUS == :database_offline
 
   # Counts and selects pages of GPX traces for various criteria (by user, tags, public etc.).
   #  target_user - if set, specifies the user to fetch traces for.  if not set will fetch all traces
@@ -146,7 +146,7 @@ class TraceController < ApplicationController
             flash[:warning] = t 'trace.trace_header.traces_waiting', :count => @user.traces.count(:conditions => { :inserted => false })
           end
 
-          redirect_to :action => 'mine'
+          redirect_to :action => :list, :display_name => @user.display_name
         end
       else
         @trace = Trace.new({:name => "Dummy",
@@ -206,7 +206,7 @@ class TraceController < ApplicationController
         trace.visible = false
         trace.save
         flash[:notice] = t 'trace.delete.scheduled_for_deletion'
-        redirect_to :controller => 'traces', :action => 'mine'
+        redirect_to :action => :list, :display_name => @user.display_name
       else
         render :nothing => true, :status => :bad_request
       end
@@ -395,11 +395,11 @@ private
   end
 
   def offline_warning
-    flash.now[:warning] = t 'trace.offline_warning.message' if OSM_STATUS == :gpx_offline
+    flash.now[:warning] = t 'trace.offline_warning.message' if STATUS == :gpx_offline
   end
 
   def offline_redirect
-    redirect_to :action => :offline if OSM_STATUS == :gpx_offline
+    redirect_to :action => :offline if STATUS == :gpx_offline
   end
 
   def default_visibility
