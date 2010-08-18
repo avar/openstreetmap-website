@@ -1,11 +1,11 @@
 <%
 links = {}
 
-links['the_full_text'] = link_to(
-    t("user.terms.summary.link.the_full_text.text"),
+links['found_below'] = link_to(
+    t("user.terms.summary.link.found_below.text"),
     '#contributorTerms',
     {
-        :title => t("user.terms.summary.link.the_full_text.title")
+        :title => t("user.terms.summary.link.found_below.title")
     }
 )
 
@@ -23,7 +23,7 @@ end
 %>
 <p>
   <%= t('user.terms.summary.items.00 not legally binding',
-        :the_full_text => links['the_full_text']
+        :found_below => links['found_below']
        )
   %>
 </p>
