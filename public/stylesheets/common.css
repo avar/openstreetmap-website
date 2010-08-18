@@ -585,7 +585,7 @@ hr {
 
 /* Rules for the account confirmation page */
 
-div#contributorTermsSummary {
+div#contributorTermsAbout, div#contributorTermsSummary {
   width: 80%;
 }
 

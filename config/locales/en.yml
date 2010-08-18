@@ -1541,6 +1541,24 @@ en:
       heading:
         summary: "Summary of OpenStreetMap Contributor Terms"
         detailed: "Contributor terms"
+      about:
+        heading: What is this?
+        text: |
+
+          OpenStreetMap is currently in the process of changing its
+          license from the CC-BY-SA 2.0 to the ODbL 1.0. As part of this
+          process new contributors are required to accept the
+          contributor terms, and existing contributors can optionally
+          accept them.
+
+          Please read the agreement below and press the agree button
+          if you accept the terms of this agreement for your existing
+          and future contributions.
+
+          You can also choose not to accept them, the number of users
+          accepting the agreement will be one factor in deciding
+          whether OpenStreetMap moves to a new license at all.
+        
       summary:
         link:
           cc_by_sa:
