@@ -1555,15 +1555,12 @@ en:
             url: http://wiki.openstreetmap.org/wiki/Contributors
             title: OpenStreetMap Contributors
             text: the Contributors page
-          found_below:
-            title: The Contributor Terms Legalese
-            text: found below
         items:
           00 not legally binding: |
 
             This is only a summary and is not legally binding! The
             legally binding text is the full text, titled "Contributor
-            Terms", {{found_below}}.
+            Terms", found below.
 
           01 do not put in data: |
             Do not put in data you don't have permission to submit. It

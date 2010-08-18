@@ -1,14 +1,6 @@
 <%
 links = {}
 
-links['found_below'] = link_to(
-    t("user.terms.summary.link.found_below.text"),
-    '#contributorTerms',
-    {
-        :title => t("user.terms.summary.link.found_below.title")
-    }
-)
-
 %w{ cc_by_sa odbl contributors }.each do |label|
     links[label] = link_to(
         t("user.terms.summary.link.#{label}.text"),
@@ -22,10 +14,7 @@ end
 
 %>
 <p>
-  <%= t('user.terms.summary.items.00 not legally binding',
-        :found_below => links['found_below']
-       )
-  %>
+  <%= t('user.terms.summary.items.00 not legally binding') %>
 </p>
 <ul>
   <li><%= t('user.terms.summary.items.01 do not put in data') %></li>
